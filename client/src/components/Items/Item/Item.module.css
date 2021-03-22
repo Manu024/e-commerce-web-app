@@ -53,3 +53,14 @@
     padding: 8px;
   }
 }
+
+@media screen and (max-width: 598px) {
+  .Item {
+    width: 44%;
+    margin: 8px;
+    padding: 8px;
+  }
+  .imgText {
+    font-size: 0.7rem;
+  }
+}
