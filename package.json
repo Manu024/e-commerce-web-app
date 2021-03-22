@@ -13,8 +13,5 @@
     "path": "^0.12.7",
     "stripe": "^8.138.0",
     "webpack": "^5.25.0"
-  },
-  "devDependencies": {
-    "concurrently": "^4.0.1"
   }
 }
