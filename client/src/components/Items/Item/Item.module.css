@@ -52,6 +52,9 @@
     margin: 8px;
     padding: 8px;
   }
+  .button {
+    padding: 0 0 8px 0;
+  }
 }
 
 @media screen and (max-width: 598px) {
