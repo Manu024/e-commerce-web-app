@@ -1,0 +1,43 @@
+.Toast {
+  width: 25%;
+  height: 60px;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  position: absolute;
+  top: 10%;
+  left: 100%;
+  animation: toast 1.5s ease 1s;
+  display: flex;
+  justify-content: space-around;
+}
+
+.ToastFailure {
+  background-color: rgba(181, 15, 15, 0.926);
+  border: 1px solid rgb(208, 16, 32);
+  color: rgb(255, 255, 255);
+}
+
+.ToastSuccess {
+  background-color: rgba(5, 181, 70, 0.938);
+  border: 1px solid rgb(16, 208, 64);
+  color: rgb(255, 255, 255);
+}
+
+@keyframes toast {
+  0%,
+  100% {
+    left: 100%;
+  }
+  20% {
+    left: 72%;
+  }
+
+  50%,
+  70%,
+  90% {
+    left: 74%;
+  }
+}

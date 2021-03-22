@@ -23,7 +23,6 @@ app.get("/api/payment", (req, res) => {
 
 app.post("/api/payment", async (req, res) => {
   const { id, amount } = req.body;
-  console.log(req.body);
   try {
     const payment = await stripe.paymentIntents.create({
       amount,

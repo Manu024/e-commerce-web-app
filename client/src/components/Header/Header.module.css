@@ -1,0 +1,125 @@
+.headerContainer {
+  width: 100%;
+  height: 70px;
+}
+
+.header {
+  margin: auto;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  min-width: 4rem;
+  height: auto;
+  margin: 0 15px 0 15px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.search {
+  width: 50%;
+  height: 40px;
+  border: solid 2px black;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.searchText {
+  width: 75%;
+  border: none;
+  margin: 0 15px 0 15px;
+}
+
+input:focus,
+input:active {
+  outline: none;
+  border: none;
+}
+
+.searchIcon {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin: 0 15px;
+  color: black;
+}
+.searchIcon:hover {
+  color: rgb(240, 198, 10);
+  cursor: pointer;
+}
+
+.Icon,
+.searchIcon {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin: 0 15px;
+  color: black;
+}
+
+.signIn {
+  margin: 0 10px 0 10px;
+  color: rgb(53, 40, 21);
+  text-decoration: none;
+}
+
+.signIn:hover,
+.signInIcon:hover {
+  color: grey;
+  cursor: pointer;
+}
+
+.Icon:hover {
+  color: rgb(240, 198, 10);
+}
+
+.bar1:hover,
+.bar2:hover,
+.bar3:hover {
+  color: grey;
+}
+.signInIcon {
+  display: none;
+  font-size: 1.5rem;
+  color: rgb(169, 138, 3);
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 1.7rem;
+  height: 4px;
+  background-color: rgb(169, 138, 3);
+  margin: 6px 0;
+  transition: 0.4s;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .search,
+  .Icons,
+  .signIn {
+    display: none;
+  }
+  .header {
+    width: 95%;
+    justify-content: space-between;
+  }
+  .logo {
+    width: 2rem;
+  }
+  .signInIcon,
+  .bar1,
+  .bar2,
+  .bar3 {
+    display: block;
+  }
+}

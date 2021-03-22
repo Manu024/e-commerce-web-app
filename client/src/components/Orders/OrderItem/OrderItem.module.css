@@ -1,0 +1,49 @@
+.OrderItem {
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 16px;
+  justify-content: space-between;
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+.imageHeader {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.OrderItemImg {
+  width: 200px;
+  height: 200px;
+}
+
+h4 {
+  padding-left: 4px;
+  font-weight: bolder;
+}
+
+.btnContainer {
+  margin: 2px;
+  padding: 4px;
+}
+
+.deleteBtn,
+.qtyBtn {
+  color: rgba(146, 133, 133, 0.877);
+  margin: 4px;
+}
+
+.qtyBtn {
+  width: 32px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 0;
+}
+
+.deleteBtn:hover {
+  cursor: pointer;
+}

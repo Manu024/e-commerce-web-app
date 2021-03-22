@@ -1,0 +1,68 @@
+.SignIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
+  left: 30%;
+  top: 10%;
+  width: 280px;
+}
+
+label {
+  font-size: small;
+  margin-top: 8px;
+}
+
+.header {
+  font-size: x-large;
+}
+
+.input {
+  width: 250px;
+  border: none;
+  border-bottom: 2px solid rgba(160, 154, 154, 0.678);
+  padding: 10px;
+}
+
+.incorrectMsg {
+  font-size: small;
+  color: red;
+  margin: 3px;
+}
+
+.btn {
+  width: 150px;
+  height: 45px;
+  background-color: rgb(209, 157, 15);
+  color: #fff;
+  border: none;
+  outline: none;
+  margin: 20px 0 0 0;
+}
+
+.input:focus,
+.input:hover {
+  border: none;
+  border-bottom: 2px solid rgb(209, 157, 15);
+}
+
+.btn:hover,
+.btn:active {
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.TnS {
+  color: rgb(24, 114, 197);
+}
+
+@media screen and (max-width: 768px) {
+  .SignIn {
+    left: 20%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .SignIn {
+    left: 10%;
+  }
+}

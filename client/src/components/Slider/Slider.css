@@ -1,0 +1,33 @@
+.Slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+  position: absolute;
+  bottom: 50%;
+  background-color: rgb(41, 41, 41);
+  border-radius: 5px;
+  width: 28px;
+}
+
+.alice-carousel__next-btn {
+  left: 96%;
+}
+
+.alice-carousel__prev-btn {
+  right: 96%;
+}
+
+.imgContainer {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .alice-carousel__prev-btn,
+  .alice-carousel__next-btn {
+    display: none;
+  }
+}

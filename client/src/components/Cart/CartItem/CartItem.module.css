@@ -1,0 +1,46 @@
+.CartItem {
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 16px;
+  justify-content: space-between;
+}
+
+.imageHeader {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.image {
+  width: 200px;
+  height: 80%;
+}
+
+.price {
+  padding-left: 4px;
+  font-weight: bolder;
+}
+
+.btnContainer {
+  margin: 2px;
+  padding: 4px;
+}
+
+.deleteBtn,
+.qtyBtn {
+  color: rgba(146, 133, 133, 0.877);
+  margin: 4px;
+}
+
+.qtyBtn {
+  width: 32px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 0;
+}
+
+.deleteBtn:hover {
+  cursor: pointer;
+}

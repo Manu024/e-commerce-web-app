@@ -1,0 +1,137 @@
+//1.8 VER:1.8 and AUTO-GENERATED on DATE:2016/11/23
+(function () {
+    var _params = [], i;
+
+    var empty = function (data) {
+        if (typeof data === 'number' || typeof data === 'boolean') {
+            return false;
+        }
+        if (typeof data === 'undefined' || data === null) {
+            return true;
+        }
+        if (data.length !== 'undefined') {
+            return data.length === 0;
+        }
+        var count = 0, j;
+        for (j in data) {
+            if (data.hasOwnProperty(j)) {
+                count = count + 1;
+            }
+        }
+        return count === 0;
+    };
+
+    if (typeof _atm_params === 'undefined' || _atm_params === null) {
+        return false;
+    }
+
+    for (i in _atm_params) {
+        if (_atm_params.hasOwnProperty(i) && !empty(_atm_params[i])) {
+            _params.push(encodeURIComponent(i) + "=" + encodeURIComponent(_atm_params[i]));
+        }
+    }
+
+    var _src_urls = [];
+    var _query_string = _params.join('&');
+
+    // data pixel for collecting both dco and site visitor data 
+    var data_source = '//datacdn.atomex.net/data/5708/1x1.gif?client_id=' + _atm_client_id + '&' + _query_string;
+
+    _src_urls.push(['image', data_source]);
+
+    //sync pixel
+    if((_atm_params.f != "v" && _atm_params.f != "b") || !_atm_params.f){
+        _src_urls.push(['script', '//sync.atomex.net/handlers?dsc=1&rh=rh0&atom_sc']);
+
+        if((_atm_params.f == "s" && _atm_params.channel == "m") || 
+            (_atm_params.f == "c" && _atm_params.channel == "m")){
+            _src_urls.push(['image', '//secure.adnxs.com/seg?add=10783940&t=2']);
+        }
+    }
+    _atm_params._atm_client_id = _atm_client_id;
+
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    fbq('init', '539671863052289'); 
+    fbq('track', 'PageView');
+
+    if (!empty(_atm_params)) {
+        //Forming string/array if id(s)
+        var p_ids = [];
+        if(!empty(_atm_params.id)) {
+            var p_ids = _atm_params.id.toString();
+            if(!(_atm_params.id instanceof Array))
+                p_ids = p_ids.split(",");
+        }
+
+        var tamt;
+        if(_atm_params.tamt === undefined){
+            tamt = "0.00";
+        } else {
+            tamt = _atm_params.tamt;
+        }
+        
+        // Obejct formation to append in event trigger
+        var cObj = {
+          content_ids: p_ids,
+          content_type: 'product',
+          value: tamt,
+          currency: 'INR'
+        };
+//        if (_atm_params.f === "c"){
+//            fbq('track', "ViewContent", cObj);
+//        }
+        if (_atm_params.f === "s" ){
+            fbq('track', "AddToCart", cObj);
+        }
+        if (_atm_params.f === "p"){
+            fbq('track', "Purchase", cObj);
+        }
+    }
+
+    (function (p, a) {
+        var w = window, d = document;
+        var pr = ('https:' === d.location.protocol ? 'https:' : 'http:');
+        var callToPP = function () {
+            setTimeout(function () {
+                if (p) {
+                    var pi, po, ks, img;
+                    for (pi = 0; pi < p.length; pi++) {
+                        po = p[pi];
+                        if (po.length > 1) {
+                            if (po[0] === 'script') {
+                                ks = d.createElement('script');
+                                ks.type = "text/javascript";
+                                ks.src = pr + po[1];
+                                d.body.appendChild(ks);
+                            } else if (po[0] === 'image') {
+                                img = d.createElement("img");
+                                img.src = pr + po[1];
+                            }
+                        }
+                    }
+                }
+            }, 0);
+        };
+        if (a === 0) {
+            callToPP();
+        } else if (a === 1) {
+            if (d.readyState && d.readyState === "complete") {
+                callToPP();
+            } else {
+                if (w.addEventListener) {
+                    w.addEventListener('load', callToPP, false);
+                } else if (w.attachEvent) {
+                    w.attachEvent('onload', callToPP);
+                }
+            }
+        }
+    }(_src_urls, 1));
+}());

@@ -1,0 +1,28 @@
+.Orders {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 12px 12px auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.OrderHeader {
+  margin: 12px 12px auto;
+  color: rgba(11, 2, 34, 0.919);
+}
+
+.explore {
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+}
+.exploreIcon {
+  width: 3.7rem;
+}
+
+@media screen and (max-width: 998px){
+    .Orders {
+        width: 95%;
+    }
+}

@@ -1,0 +1,19 @@
+.imgGallery {
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+}
+
+.img {
+    margin-top: 8px;
+    max-width: 10%;
+    height: auto;
+}
+.img1 {
+    margin-top: 8px;
+    width: 100%;
+    height: auto;
+}
