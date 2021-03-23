@@ -44,7 +44,21 @@
 
 @media screen and (max-width: 598px){
   .Toast {
-    width: 30%;
+    width: 40%;
     font-size: 0.75rem;
+  }
+  @keyframes toast {
+    0%,
+    100% {
+      left: 100%;
+    }
+    20% {
+      left: 52%;
+    }
+    50%,
+    70%,
+    90% {
+      left: 54%;
+    }
   }
 }

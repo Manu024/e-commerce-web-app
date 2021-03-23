@@ -62,5 +62,6 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .orderText{
     font-size: 0.5rem;
+    margin-left: 1.5px;
   }
 }
