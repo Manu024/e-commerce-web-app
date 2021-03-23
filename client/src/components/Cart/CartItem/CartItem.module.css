@@ -16,6 +16,10 @@
   height: 80%;
 }
 
+.Text {
+  font-size: 1.5rem;
+}
+
 .price {
   padding-left: 4px;
   font-weight: bolder;
@@ -43,4 +47,14 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .deleteBtn:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 598px){
+  .image {
+    width: 20%;
+    height: auto;
+  }
+  .Text {
+    font-size: 1rem;
+  }
 }

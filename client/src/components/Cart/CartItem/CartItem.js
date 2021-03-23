@@ -8,7 +8,7 @@ const CartItem = (props) => {
         <div className={classes.imageHeader}>
           <img className={classes.image} src={props.image} alt="" />
           <div className={classes.btnContainer}>
-            <h3>{props.productName}</h3>
+            <p className={classes.Text}>{props.productName}</p>
             <span
               onClick={() => {
                 props.deleteCartItem(props.productName);
@@ -27,7 +27,7 @@ const CartItem = (props) => {
             />
           </div>
         </div>
-        <h4 className={classes.price}>₹ {props.price}</h4>
+        <p className={[classes.Text, classes.price].join(" ")}>₹ {props.price}</p>
       </div>
       <hr />
     </React.Fragment>
