@@ -60,4 +60,7 @@ input[type="number"]::-webkit-outer-spin-button {
   .Text {
     font-size: 1rem;
   }
+  .orderText{
+    font-size: 0.5rem;
+  }
 }

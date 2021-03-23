@@ -8,7 +8,7 @@ const OrderItem = (props) => {
         <img className={classes.OrderItemImg} src={props.image} alt="" />
         <div className={classes.btnContainer}>
           <p className={classes.Text}>{props.productName}</p>
-          <p style={{ margin: "8px" }}> Ordered at: {props.date}</p>
+          <p className={classes.orderText}> Ordered at: {props.date}</p>
         </div>
       </div>
       <h4>₹ {props.price}</h4>
