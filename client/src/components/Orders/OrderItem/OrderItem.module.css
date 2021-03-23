@@ -35,6 +35,10 @@ h4 {
   margin: 4px;
 }
 
+.Text {
+  font-size: 1.5rem;
+}
+
 .qtyBtn {
   width: 32px;
 }
@@ -46,4 +50,14 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .deleteBtn:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 598px){
+  .OrderItemImg {
+    width: 20%;
+    height: auto;
+  }
+  .Text {
+    font-size: 1rem;
+  }
 }

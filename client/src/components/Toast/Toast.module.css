@@ -41,3 +41,10 @@
     left: 74%;
   }
 }
+
+@media screen and (max-width: 598px){
+  .Toast {
+    width: 30%;
+    font-size: 0.75rem;
+  }
+}
